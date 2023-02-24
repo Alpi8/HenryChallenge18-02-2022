@@ -1,4 +1,4 @@
-/* 
+/* GUIA   https://www.youtube.com/watch?v=yFjPLU79UVg
   Importante: 
   No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
   código dentro de las funciones ya definidas. 
@@ -9,17 +9,19 @@ function crearClaseEmprendedor() {
       constructor(nombre, apellido, libros, mascotas) {
           // El constructor de la clase Emprendedor recibe nombre (string), apellido (string), libros (array de objetos), mascotas (array de strings)
           // Inicializar las propiedades del emprendedor con los valores recibidos como argumento
-
-          // Tu código aca:
-
+          this.nombre = nombre
+          this.apellido = apellido
+          this.libros = libros
+          this.mascotas = mascotas
+         
+          // return Emprendedor NO SE SI ESTA LINEA VA
       }
-
+      
       addMascota(mascota) {
         // este método debe agregar una mascota (mascota) al arreglo de mascotas del emprendedor.
         // no debe retornar nada.
-
         // Tu código aca:
-
+      this.mascotas.push(mascota)
       }
 
       getMascotas() {
@@ -27,8 +29,8 @@ function crearClaseEmprendedor() {
           // Ej:
           // Suponiendo que el emprendedor tiene estas mascotas: ['perro', 'gato']
           // emprendedor.getMascotas() debería devolver 2
-
-          // Tu código aca:
+         
+        return (this.mascotas.length)
 
       }
 
@@ -38,6 +40,8 @@ function crearClaseEmprendedor() {
           // No debe retornar nada.
 
           // Tu código aca:
+        var biblioteca = {nombre : book, autor : autor  } 
+        this.libros.push(biblioteca)
 
       }
 
@@ -48,6 +52,14 @@ function crearClaseEmprendedor() {
           // emprendedor.getBooks() debería devolver ['El señor de las moscas', 'Fundacion']
 
           // Tu código aca:
+          
+          var nuevoArreglo = [];
+          for (var i = 0; i < this.libros.length; i++) { 
+            nuevoArreglo.push(this.libros[i].nombre)
+            }
+   
+          return(nuevoArreglo)
+
 
       }
 
@@ -58,6 +70,8 @@ function crearClaseEmprendedor() {
           // emprendedor.getFullName() deberia devolver 'Elon Musk'
 
           // Tu código aca:
+         var nombreCompleto = this.nombre + " " + this.apellido;
+         return(nombreCompleto)
 
       }
   }

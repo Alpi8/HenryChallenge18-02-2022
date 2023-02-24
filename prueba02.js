@@ -1,10 +1,7 @@
-/* 
-  Importante: 
-  No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
-  código dentro de las funciones ya definidas. 
-  No comentar la funcion 
-*/
-function cuantosOnline(usuarios) {
+// EJERCICIO 03 SUPERADO
+
+// function cuantosOnline(usuarios) {
+
   // La funcion llamada "cuantosOnline" recibe como argumento un objeto 'usuarios', cada property de ese objeto es un objeto
   // cada usuario tiene una property 'online' que es un booleano.
   // deberia devolver la cantidad de usuarios con la property online igual a true.
@@ -32,15 +29,32 @@ function cuantosOnline(usuarios) {
 
   // Tu código aca:
   contador = 0
+    let usuarios = {
+            toni: {
+                edad: 33,
+                online: true
+            },
+            emi: {
+                edad: 25,
+                online: true
+            },
+            fran: {
+                edad: 25,
+                online: true
+            },
+            agus: {
+                edad: 24,
+                online: false
+            }
+        }; 
+
   for (let i in usuarios) {
     if (usuarios[i].online == true ){
-      contador ++    
+      contador ++
+        
     }
-  }
-return (contador)
-}
+    
+ };
+ 
+ console.log ("Resultado contador " + contador)
 
-
-// No modifiques nada debajo de esta linea //
-
-module.exports = cuantosOnline

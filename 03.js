@@ -14,7 +14,16 @@ function divisores(numero) {
   // divisores(11) devuelve 'Es primo'
 
    // Tu código aca:
-
+   nuevoArray = []
+      for (contador=2; contador < numero;  contador++) {
+          if (numero % contador == 0 && contador < numero) {
+            nuevoArray.push(contador)
+          }      
+        }
+    if (nuevoArray.length > 1){
+      return (nuevoArray) 
+    }
+    return ("Es primo"); 
 }
 
 // No modifiques nada debajo de esta linea //
